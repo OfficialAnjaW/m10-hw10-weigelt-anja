@@ -13,6 +13,10 @@ h2 {
   color: #3895d3;
 }
 
+span {
+  color: #ea3c53;
+}
+
 .hide {
   opacity: 0;
 }
