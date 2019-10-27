@@ -28,3 +28,11 @@ const addFreezing = () => {
 addFreezing();
 
 // Arrow Function 3
+
+let waterTemp = document.getElementById('water-temp');
+
+let addWater = () => {
+  let waterText = document.createTextNode('90');
+  waterTemp.appendChild(waterText);
+}
+addWater();
