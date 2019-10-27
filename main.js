@@ -31,9 +31,9 @@ addFreezing();
 
 // Arrow Function 3
 
-let waterTemp = document.getElementById('water-temp');
+const waterTemp = document.getElementById('water-temp');
 
-let addWater = () => {
+const addWater = () => {
   let waterText = document.createTextNode('90');
   waterTemp.appendChild(waterText);
 }
@@ -45,17 +45,44 @@ const boilingSection = document.getElementById('boiling');
 const frozenSection = document.getElementById('frozen');
 const goodSection = document.getElementById('good-temp');
 
-setTimeout(() => {
-  boilingSection.classList.remove('hide');
-  boilingSection.classList.add('show');
-}, 3000);
+const hotTemp = 212;
+const coldTemp = 32;
+let currentTemp = 90;
 
-setTimeout(() => {
-  frozenSection.classList.remove('hide');
-  frozenSection.classList.add('show');
-}, 3000);
+if (currentTemp > hotTemp) {
+  setTimeout(() => {
+    boilingSection.classList.remove('hide');
+    boilingSection.classList.add('show');
+  }, 3000);
+}
+else {
+  if (currentTemp < coldTemp) {
+    setTimeout(() => {
+      frozenSection.classList.remove('hide');
+      frozenSection.classList.add('show');
+    }, 3000);
+  }
+  else {
+    setTimeout(() => {
+      goodSection.classList.remove('hide');
+      goodSection.classList.add('show');
+    }, 3000);
+  }
+}
 
-setTimeout(() => {
-  goodSection.classList.remove('hide');
-  goodSection.classList.add('show');
-}, 3000);
+// Basic Setup
+
+// setTimeout(() => {
+//   boilingSection.classList.remove('hide');
+//   boilingSection.classList.add('show');
+// }, 3000);
+
+// setTimeout(() => {
+//   frozenSection.classList.remove('hide');
+//   frozenSection.classList.add('show');
+// }, 3000);
+
+// setTimeout(() => {
+//   goodSection.classList.remove('hide');
+//   goodSection.classList.add('show');
+// }, 3000);
