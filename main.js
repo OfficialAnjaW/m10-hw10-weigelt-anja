@@ -19,4 +19,12 @@ addBoiling();
 
 // Arrow Function 2
 
+const freezingTemp = document.getElementById('freezing-temp');
+
+const addFreezing = () => {
+  const freezingText = document.createTextNode('32');
+  freezingTemp.appendChild(freezingText);
+}
+addFreezing();
+
 // Arrow Function 3
